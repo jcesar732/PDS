@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>PDS</title>
+    
+    <link href="http://somewebsite.com/css/bootstrap.css" rel="stylesheet">
+    <link href="http://somewebsite.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/<bootstrap_version_number>/css/bootstrap.min.css" rel="stylesheet">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+						
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li> <!--  class="active" -->
+							<a href="index.aspx">Index</a>
+						</li>
+						<li>
+							<a href="cadastro_clientes.aspx">Cadastro de clientes</a>
+						</li>	
+                        <li>
+							<a href="cadastro_funcionarios.aspx">Cadastro de clientes</a>
+						</li>
+                        <li>
+							<a href="cadastro_compras.aspx">Cadastro de compras</a>
+						</li>
+                        <li>
+							<a href="cadastro_vendas.aspx">Cadastro de vendas</a>
+						</li>
+                        <li>
+							<a href="cadastro_produtos.aspx">Cadastro de produtos</a>
+						</li>	
+					</ul>
+				</div>
+			</nav>
+			<div class="jumbotron">
+                <h2>Gerenciamento - PDS</h2>
+				<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+                <!-- <h2>
+					TABELAS....
+				</h2> -->
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h5 class="text-center">
+						© COPYRIGHT 2017 || GERENCIAMENTO PDS - DEVELOPED BY J.J.J.W :)
+					</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ </form>
+</body>
+</html>
