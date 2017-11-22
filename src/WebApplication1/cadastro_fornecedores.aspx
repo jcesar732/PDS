@@ -4,19 +4,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2> Cadastro de fornecedores <asp:Button ID="Button3" runat="server" Text="Incluir" OnClick="Button3_Click" /> </h2>
 
-     
     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" DataKeyField="codigo">
         <AlternatingItemStyle BackColor="White" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
         <ItemStyle BackColor="#E3EAEB" />
         <ItemTemplate>
+            <!-- precisam de modal-->
            <asp:Button ID="Button1" runat="server" Text="Excluir" OnClick="Button1_Click" />
            <asp:Button ID="Button2" runat="server" Text="Alterar" OnClick="Button2_Click" />
             <br />
             codigo:
-            <asp:Label ID="codigoLabel" runat="server" Text='<%# Eval("codigo") %>' />
-           
+            <asp:Label ID="codigoLabel" runat="server" Text='<%# Eval("codigo") %>' OnPreRender="idClienteLabel_PreRender" />
             <br />
             nome:
             <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
@@ -39,7 +38,7 @@
             cnpj:
             <asp:Label ID="cnpjLabel" runat="server" Text='<%# Eval("cnpj") %>' />
             <br />
-<br />
+            <br />
         </ItemTemplate>
         <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
     </asp:DataList>

@@ -11,19 +11,31 @@ namespace WebApplication1
 {
     public partial class cadastro_fornecedores : System.Web.UI.Page
     {
+        int id_fornecedor;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //id_fornecedor = 
+         //   Session["idClienteExcluir"] = (sender as Button).CommandName;
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {//incluir
-
+            
             Response.Redirect("~/cadastro_fornecedores.aspx");
         }
 
         protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void idClienteLabel_PreRender(object sender, EventArgs e)
+        {
+            
+            id_fornecedor = int.Parse((sender as Label).Text);
+            (sender as Label).Visible = true;
+            (sender as Label).ID.ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -42,7 +54,7 @@ namespace WebApplication1
           SqlCommand com = sqlfornecedor.CreateCommand();
 
           // define SQL do comando
-        //  com.CommandText = "DELETE FROM Fornecedor WHERE nome = " + codigoLabel.Text + " ";
+          com.CommandText = "DELETE FROM Fornecedor WHERE codigo = 1 ";
 
           Response.Redirect("~/cadastro_fornecedores.aspx");
         }

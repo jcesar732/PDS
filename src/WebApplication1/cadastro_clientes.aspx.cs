@@ -9,6 +9,7 @@ namespace WebApplication1
 {
     public partial class cadastro_clientes : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
