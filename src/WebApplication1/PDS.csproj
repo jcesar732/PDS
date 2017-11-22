@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cadastro_clientes.aspx" />
+    <Content Include="cadastro_fornecedores.aspx" />
+    <Content Include="cadastro_produtos.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -68,6 +70,20 @@
     </Compile>
     <Compile Include="cadastro_clientes.aspx.designer.cs">
       <DependentUpon>cadastro_clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastro_fornecedores.aspx.cs">
+      <DependentUpon>cadastro_fornecedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastro_fornecedores.aspx.designer.cs">
+      <DependentUpon>cadastro_fornecedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastro_produtos.aspx.cs">
+      <DependentUpon>cadastro_produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastro_produtos.aspx.designer.cs">
+      <DependentUpon>cadastro_produtos.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
