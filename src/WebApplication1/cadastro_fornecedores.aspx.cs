@@ -15,6 +15,10 @@ namespace WebApplication1
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            //Text='<%# Eval("codigo") %>'
+            Label1.Text = id_fornecedor.ToString();
+
             //id_fornecedor = 
          //   Session["idClienteExcluir"] = (sender as Button).CommandName;
         }
@@ -33,7 +37,9 @@ namespace WebApplication1
         protected void idClienteLabel_PreRender(object sender, EventArgs e)
         {
             
-            id_fornecedor = int.Parse((sender as Label).Text);
+            //id_fornecedor = int.Parse((sender as Label).Text);
+            //int.Parse((sender as Label).Text);
+            
             (sender as Label).Visible = true;
             (sender as Label).ID.ToString();
         }

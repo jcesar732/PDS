@@ -3,6 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2> Cadastro de fornecedores <asp:Button ID="Button3" runat="server" Text="Incluir" OnClick="Button3_Click" /> </h2>
+    
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
 
     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" DataKeyField="codigo">
         <AlternatingItemStyle BackColor="White" />
@@ -14,7 +17,7 @@
            <asp:Button ID="Button1" runat="server" Text="Excluir" OnClick="Button1_Click" />
            <asp:Button ID="Button2" runat="server" Text="Alterar" OnClick="Button2_Click" />
             <br />
-            codigo:
+            codigo
             <asp:Label ID="codigoLabel" runat="server" Text='<%# Eval("codigo") %>' OnPreRender="idClienteLabel_PreRender" />
             <br />
             nome:
