@@ -15,7 +15,7 @@ namespace WebApplication1
      
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["id_excluir"]= id;
+            //Session["id_excluir"]= id;
         }
 
         protected void LinkButton1_PreRender(object sender, EventArgs e)
@@ -25,11 +25,14 @@ namespace WebApplication1
             //chamar o comando sql pra fazer o comando
             //excluir
             id = int.Parse((sender as LinkButton).CommandName);
-            Session["id_excluir"] = (sender as LinkButton).CommandName;
+            
+           Session["id_excluir"] = (sender as LinkButton).CommandName;
+           Response.Redirect("~/crud/fornecedor_excluir.aspx");  //e ai colocar a sessao com o id para o arquivo excluir
         }
 
         public void getexcluir(object sender, EventArgs e)
         {
+            /*
             //int.Parse((sender as Label).Text) = id.ToString();
             // Acessa a configuração da conexão
             string s = ConfigurationManager.ConnectionStrings["PDSI_2017_Julio_TrindadeConnectionString"].ConnectionString;
@@ -45,10 +48,12 @@ namespace WebApplication1
 
             // define SQL do comando
             com.CommandText = "DELETE FROM Fornecedor WHERE codigo = " + int.Parse((sender as LinkButton).CommandName) + " ";
+            */
         }
 
         protected void codigoLabel_PreRender(object sender, EventArgs e)
         {//prerender da label pra pegar id do banco
+            /*
             //int.Parse((sender as Label).Text) = id.ToString();
             // Acessa a configuração da conexão
             string s = ConfigurationManager.ConnectionStrings["PDSI_2017_Julio_TrindadeConnectionString"].ConnectionString;
@@ -64,6 +69,7 @@ namespace WebApplication1
 
             // define SQL do comando
             com.CommandText = "DELETE FROM Fornecedor WHERE codigo = " + Session["id_excluir"] + " ";
+            */
         }
     }
 }
