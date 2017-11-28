@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2> Cadastro de fornecedores <asp:Button ID="Button3" runat="server" Text="Incluir" OnClick="Button3_Click" /> </h2>
+    <h2> Cadastro de fornecedores <!-- link button incluir--> </h2>
     
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
 
@@ -14,8 +14,9 @@
         <ItemStyle BackColor="#E3EAEB" />
         <ItemTemplate>
             <!-- precisam de modal-->
-           <asp:Button ID="Button1" runat="server" Text="Excluir" OnClick="Button1_Click" />
-           <asp:Button ID="Button2" runat="server" Text="Alterar" OnClick="Button2_Click" />
+           <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" OnPreRender="LinkButton1_PreRender">Editar</asp:LinkButton>
+    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" OnPreRender="LinkButton2_PreRender">Excluir</asp:LinkButton>
+
             <br />
             codigo
             <asp:Label ID="codigoLabel" runat="server" Text='<%# Eval("codigo") %>' OnPreRender="idClienteLabel_PreRender" />

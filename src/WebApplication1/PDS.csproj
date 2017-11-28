@@ -60,6 +60,8 @@
     <Content Include="cadastro_clientes.aspx" />
     <Content Include="cadastro_fornecedores.aspx" />
     <Content Include="cadastro_produtos.aspx" />
+    <Content Include="fornecedor_excluir.aspx" />
+    <Content Include="cruds\test.txt" />
     <Content Include="index.aspx" />
     <Content Include="testfornecedores.aspx" />
     <Content Include="Web.config" />
@@ -85,6 +87,13 @@
     </Compile>
     <Compile Include="cadastro_produtos.aspx.designer.cs">
       <DependentUpon>cadastro_produtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fornecedor_excluir.aspx.cs">
+      <DependentUpon>fornecedor_excluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fornecedor_excluir.aspx.designer.cs">
+      <DependentUpon>fornecedor_excluir.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

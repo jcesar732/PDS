@@ -5,7 +5,6 @@
  
     <h2> Teste de Cadastro de fornecedores</h2>
 
-    
     <asp:DataList ID="DataList1" runat="server" DataKeyField="codigo" DataSourceID="SqlDataSource1">
         <ItemTemplate>
             
@@ -16,7 +15,7 @@
             <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
             
             <br />
-            <asp:LinkButton ID="LinkButton1" runat="server" OnPreRender="LinkButton1_PreRender">LinkButton</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton1" runat="server" OnPreRender="LinkButton1_PreRender" OnClick="LinkButton1_Click">LinkButton</asp:LinkButton>
             <br />
 
         </ItemTemplate>

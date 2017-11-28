@@ -17,16 +17,10 @@ namespace WebApplication1
         {
             
             //Text='<%# Eval("codigo") %>'
-            Label1.Text = id_fornecedor.ToString();
+        //    Label1.Text = id_fornecedor.ToString();
 
             //id_fornecedor = 
          //   Session["idClienteExcluir"] = (sender as Button).CommandName;
-        }
-
-        protected void Button3_Click(object sender, EventArgs e)
-        {//incluir
-            
-            Response.Redirect("~/cadastro_fornecedores.aspx");
         }
 
         protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,15 +30,10 @@ namespace WebApplication1
 
         protected void idClienteLabel_PreRender(object sender, EventArgs e)
         {
-            
-            //id_fornecedor = int.Parse((sender as Label).Text);
-            //int.Parse((sender as Label).Text);
-            
-            (sender as Label).Visible = true;
-            (sender as Label).ID.ToString();
+            id_fornecedor = int.Parse((sender as Label).Text);
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+       /* protected void Button1_Click(object sender, EventArgs e)
         {//excluir
 
           // Acessa a configuração da conexão
@@ -64,11 +53,36 @@ namespace WebApplication1
 
           Response.Redirect("~/cadastro_fornecedores.aspx");
         }
+      */
 
-        protected void Button2_Click(object sender, EventArgs e)
-        {//alterar
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {//editar
+            Session["id_excluir"] = (sender as LinkButton).CommandName;
+            Session["tipo"] = "excluir";
+            if ((sender as LinkButton).CommandName != "0")
+            {
+                Response.Redirect("~/fornecedor_excluir.aspx");
+            }
+        }
 
-            Response.Redirect("~/cadastro_fornecedores.aspx");
+        protected void LinkButton1_PreRender(object sender, EventArgs e)
+        {//editar
+            (sender as LinkButton).CommandName = Convert.ToString(id_fornecedor);
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {//excluir
+            Session["id_editar"] = (sender as LinkButton).CommandName;
+            Session["tipo"] = "editar";
+            if ((sender as LinkButton).CommandName != "0")
+            {
+                Response.Redirect("~/fornecedor_excluir.aspx");
+            }
+        }
+
+        protected void LinkButton2_PreRender(object sender, EventArgs e)
+        {//excluir
+            (sender as LinkButton).CommandName = Convert.ToString(id_fornecedor);
         }
     }
 }
