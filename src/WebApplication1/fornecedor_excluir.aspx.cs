@@ -11,13 +11,14 @@ namespace WebApplication1.cruds
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id_excluir"] != "0")
+            if (Session["id_excluir"] == "0")
             {
-                Label1.Text = "olá session";
+                Label1.Text = "1 codigo";
             }
-            if(Session["tipo"] == "excluir"){
-                Label1.Text = "div excluir";
-            }
+            else { Label1.Text = "2 codigo"; }
+            //if(Session["tipo"] == "excluir"){
+             //   Label1.Text = "div excluir";
+            //}
         }
     }
 }

@@ -32,6 +32,25 @@ namespace WebApplication1
         {
             id_fornecedor = int.Parse((sender as Label).Text);
         }
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {//editar
+            Session["id_editar"] = (sender as LinkButton).CommandName;
+            //PQ PODE SER 0 o valor de (sender as LinkButton).CommandName;
+
+            //if ((sender as LinkButton).CommandName != "0")
+         //   if (Session["id_editar"] != "0")
+          //  {
+                Response.Redirect("~/fornecedor_excluir.aspx");
+          //  }
+        }
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {//excluir
+            Session["id_excluir"] = (sender as LinkButton).CommandName;
+           // if ((sender as LinkButton).CommandName != "0")
+            //{
+                Response.Redirect("~/fornecedor_excluir.aspx");
+            //}
+        }
 
        /* protected void Button1_Click(object sender, EventArgs e)
         {//excluir
@@ -55,34 +74,16 @@ namespace WebApplication1
         }
       */
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {//editar
-            Session["id_excluir"] = (sender as LinkButton).CommandName;
-            Session["tipo"] = "excluir";
-            if ((sender as LinkButton).CommandName != "0")
-            {
-                Response.Redirect("~/fornecedor_excluir.aspx");
-            }
-        }
-
         protected void LinkButton1_PreRender(object sender, EventArgs e)
         {//editar
             (sender as LinkButton).CommandName = Convert.ToString(id_fornecedor);
-        }
-
-        protected void LinkButton2_Click(object sender, EventArgs e)
-        {//excluir
             Session["id_editar"] = (sender as LinkButton).CommandName;
-            Session["tipo"] = "editar";
-            if ((sender as LinkButton).CommandName != "0")
-            {
-                Response.Redirect("~/fornecedor_excluir.aspx");
-            }
-        }
 
+        }
         protected void LinkButton2_PreRender(object sender, EventArgs e)
         {//excluir
             (sender as LinkButton).CommandName = Convert.ToString(id_fornecedor);
+            Session["id_excluir"] = (sender as LinkButton).CommandName;
         }
     }
 }
