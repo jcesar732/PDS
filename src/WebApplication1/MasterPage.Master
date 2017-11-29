@@ -27,12 +27,12 @@
 							<a href="index.aspx">Index</a>
 						</li>
 						<li>
-							<a href="cadastro_clientes.aspx">Cadastro de clientes</a>
+							<a href="cadastro_clientes.aspx">Cadastro de fornecedores</a>
 						</li>	
                         <li>
 							<a href="cadastro_funcionarios.aspx">Cadastro de clientes</a>
 						</li>
-                        <li>
+                        <!--<li>
 							<a href="cadastro_compras.aspx">Cadastro de compras</a>
 						</li>
                         <li>
@@ -40,7 +40,7 @@
 						</li>
                         <li>
 							<a href="cadastro_produtos.aspx">Cadastro de produtos</a>
-						</li>	
+						</li>	-->
 					</ul>
 				</div>
 			</nav>

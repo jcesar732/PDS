@@ -60,6 +60,11 @@
     <Content Include="cadastro_clientes.aspx" />
     <Content Include="cadastro_fornecedores.aspx" />
     <Content Include="cadastro_produtos.aspx" />
+    <Content Include="clientes_adicionar.aspx" />
+    <Content Include="clientes_editar.aspx" />
+    <Content Include="clientes_excluir.aspx" />
+    <Content Include="fornecedor_adicionar.aspx" />
+    <Content Include="fornecedor_editar.aspx" />
     <Content Include="fornecedor_excluir.aspx" />
     <Content Include="cruds\test.txt" />
     <Content Include="index.aspx" />
@@ -87,6 +92,41 @@
     </Compile>
     <Compile Include="cadastro_produtos.aspx.designer.cs">
       <DependentUpon>cadastro_produtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clientes_adicionar.aspx.cs">
+      <DependentUpon>clientes_adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientes_adicionar.aspx.designer.cs">
+      <DependentUpon>clientes_adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clientes_editar.aspx.cs">
+      <DependentUpon>clientes_editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientes_editar.aspx.designer.cs">
+      <DependentUpon>clientes_editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clientes_excluir.aspx.cs">
+      <DependentUpon>clientes_excluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientes_excluir.aspx.designer.cs">
+      <DependentUpon>clientes_excluir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fornecedor_adicionar.aspx.cs">
+      <DependentUpon>fornecedor_adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fornecedor_adicionar.aspx.designer.cs">
+      <DependentUpon>fornecedor_adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fornecedor_editar.aspx.cs">
+      <DependentUpon>fornecedor_editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fornecedor_editar.aspx.designer.cs">
+      <DependentUpon>fornecedor_editar.aspx</DependentUpon>
     </Compile>
     <Compile Include="fornecedor_excluir.aspx.cs">
       <DependentUpon>fornecedor_excluir.aspx</DependentUpon>

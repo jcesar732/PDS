@@ -52,28 +52,6 @@ namespace WebApplication1
             //}
         }
 
-       /* protected void Button1_Click(object sender, EventArgs e)
-        {//excluir
-
-          // Acessa a configuração da conexão
-          string s = ConfigurationManager.ConnectionStrings["PDSI_2017_Julio_TrindadeConnectionString"].ConnectionString;
-
-          // Cria Conexão com banco de dados
-          SqlConnection sqlfornecedor = new SqlConnection(s);
-
-          // Abre conexão com o banco de dados
-          sqlfornecedor.Open();
-
-          // Cria comando SQL
-          SqlCommand com = sqlfornecedor.CreateCommand();
-
-          // define SQL do comando
-          com.CommandText = "DELETE FROM Fornecedor WHERE codigo = 1 ";
-
-          Response.Redirect("~/cadastro_fornecedores.aspx");
-        }
-      */
-
         protected void LinkButton1_PreRender(object sender, EventArgs e)
         {//editar
             (sender as LinkButton).CommandName = Convert.ToString(id_fornecedor);

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,16 +11,40 @@ namespace WebApplication1.cruds
 {
     public partial class fornecedor_excluir : System.Web.UI.Page
     {
+        int contator_excluir;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id_excluir"] == "0")
-            {
-                Label1.Text = "1 codigo";
+            //contador
+            contator_excluir = int.Parse(Session["id_excluir"].ToString()) + 1;
+
+            if (Session["id_excluir"].ToString() == "0")
+            { 
+                Label1.Text = "" + Session["id_excluir"] + ""; 
             }
-            else { Label1.Text = "2 codigo"; }
-            //if(Session["tipo"] == "excluir"){
-             //   Label1.Text = "div excluir";
-            //}
+            else {
+                Label1.Text = "" + Session["id_excluir"] + contator_excluir + "";
+            }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {//confirmar excluir - ERROR    
+            
+          // Acessa a configuração da conexão
+            string s = ConfigurationManager.ConnectionStrings["PDSI_2017_Julio_TrindadeConnectionString"].ConnectionString;
+
+          // Cria Conexão com banco de dados
+          SqlConnection sqlfornecedor = new SqlConnection(s);
+
+          // Abre conexão com o banco de dados
+          sqlfornecedor.Open();
+
+          // Cria comando SQL
+          SqlCommand com = sqlfornecedor.CreateCommand();
+
+          // define SQL do comando
+          com.CommandText = "DELETE FROM Fornecedor WHERE codigo = " + contator_excluir + " ";
+          Response.Redirect("~/cadastro_fornecedores.aspx");
+        }
+
     }
 }
