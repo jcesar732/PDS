@@ -18,3 +18,9 @@ C:\Users\20141011110131.IFRN\Documents\PDS\src\WebApplication1\bin\WebApplicatio
 C:\Users\20141011110131.IFRN\Documents\PDS\src\WebApplication1\obj\Debug\PDS.csprojResolveAssemblyReference.cache
 C:\Users\20141011110131.IFRN\Documents\PDS\src\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\20141011110131.IFRN\Documents\PDS\src\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Public\Documents\PDS\src\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Public\Documents\PDS\src\WebApplication1\bin\WebApplication1.dll
+C:\Users\Public\Documents\PDS\src\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Public\Documents\PDS\src\WebApplication1\obj\Debug\PDS.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\PDS\src\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Public\Documents\PDS\src\WebApplication1\obj\Debug\WebApplication1.pdb

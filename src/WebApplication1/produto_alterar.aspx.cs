@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class fornecedor_adicionar : System.Web.UI.Page
+    public partial class produto_alterar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["id_editar"];
         }
     }
 }

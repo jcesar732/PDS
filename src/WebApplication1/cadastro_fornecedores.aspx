@@ -25,7 +25,7 @@
             <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
             <br />
             telefone:
-            <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' />
+             <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' />
             <br />
             cidade:
             <asp:Label ID="cidadeLabel" runat="server" Text='<%# Eval("cidade") %>' />
