@@ -19,7 +19,7 @@ namespace WebApplication1.cruds
 
             if (Session["id_excluir"].ToString() == "0")
             { 
-                Label1.Text = "" + Session["id_excluir"] + ""; 
+                Label1.Text = "Deseja excluir o fornecedor de ID: " + Session["id_excluir"] + ""; 
             }
             else {
                 Label1.Text = "" + Session["id_excluir"] + contator_excluir + "";
@@ -27,23 +27,23 @@ namespace WebApplication1.cruds
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {//confirmar excluir - ERROR    
-            
-          // Acessa a configuração da conexão
+        {//excluir 
+            // Acessa a configuração da conexão
             string s = ConfigurationManager.ConnectionStrings["PDSI_2017_Julio_TrindadeConnectionString"].ConnectionString;
 
-          // Cria Conexão com banco de dados
-          SqlConnection sqlfornecedor = new SqlConnection(s);
+            // Cria Conexão com banco de dados
+            SqlConnection sqlfornecedor = new SqlConnection(s);
 
-          // Abre conexão com o banco de dados
-          sqlfornecedor.Open();
+            // Abre conexão com o banco de dados
+            sqlfornecedor.Open();
 
-          // Cria comando SQL
-          SqlCommand com = sqlfornecedor.CreateCommand();
+            // Cria comando SQL
+            SqlCommand com = sqlfornecedor.CreateCommand();
 
-          // define SQL do comando
-          com.CommandText = "DELETE FROM Fornecedor WHERE codigo = " + contator_excluir + " ";
-          Response.Redirect("~/cadastro_fornecedores.aspx");
+            // define SQL do comando
+            com.CommandText = "Delete from Fornecedor where codigo = ' " + Session["id_excluir"] + " ' ";
+            com.ExecuteNonQuery();
+            Response.Redirect("~/cadastro_fornecedores.aspx");
         }
 
     }

@@ -28,9 +28,9 @@ namespace WebApplication1
             id_fornecedor = int.Parse((sender as Label).Text);
         }
         protected void LinkButton1_Click(object sender, EventArgs e)
-        {//editar
+        {//alterar
             Session["id_editar"] = (sender as LinkButton).CommandName;
-            Response.Redirect("~/fornecedor_excluir.aspx");
+            Response.Redirect("~/fornecedor_editar.aspx");
         }
         protected void LinkButton2_Click(object sender, EventArgs e)
         {//excluir
@@ -48,6 +48,11 @@ namespace WebApplication1
         {//excluir
             (sender as LinkButton).CommandName = Convert.ToString(id_fornecedor);
             Session["id_excluir"] = (sender as LinkButton).CommandName;
+        }
+
+        protected void LinkButton1_Click1(object sender, EventArgs e)
+        {//click incluir
+            Response.Redirect("~/fornecedor_adicionar.aspx");
         }
         //fata o evento incluir
         

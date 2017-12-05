@@ -2,47 +2,34 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2> Cadastro de fornecedores <!-- link button incluir--> </h2>
-    
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
-
+    <h2> Cadastro de fornecedores <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click1">Incliur</asp:LinkButton> </h2>
     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" DataKeyField="codigo">
         <AlternatingItemStyle BackColor="White" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
         <ItemStyle BackColor="#E3EAEB" />
         <ItemTemplate>
-            <!-- precisam de modal-->
-           <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" OnPreRender="LinkButton1_PreRender">Editar</asp:LinkButton>
-           <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" OnPreRender="LinkButton2_PreRender">Excluir</asp:LinkButton>
 
-            <br />
-            codigo
-            <asp:Label ID="codigoLabel" runat="server" Text='<%# Eval("codigo") %>' OnPreRender="idClienteLabel_PreRender" />
-            <br />
-            nome:
-            <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
-            <br />
-            telefone:
-             <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' />
-            <br />
-            cidade:
-            <asp:Label ID="cidadeLabel" runat="server" Text='<%# Eval("cidade") %>' />
-            <br />
-            estado:
-            <asp:Label ID="estadoLabel" runat="server" Text='<%# Eval("estado") %>' />
-            <br />
-            email:
-            <asp:Label ID="emailLabel" runat="server" Text='<%# Eval("email") %>' />
-            <br />
-            cpf:
-            <asp:Label ID="cpfLabel" runat="server" Text='<%# Eval("cpf") %>' />
-            <br />
-            cnpj:
-            <asp:Label ID="cnpjLabel" runat="server" Text='<%# Eval("cnpj") %>' />
-            <br />
-            <br />
+        <table>
+            <tr style="padding:8px"> 
+                <th style="padding:8px"> codigo </th>
+                <th  style="padding:8px"> nome </th>
+                <th  style="padding:8px"> telefone </th>
+                <th style="padding:8px"> cidade </th>
+                <th  style="padding:8px"> email </th>
+                <th style="padding:8px"> edição </th>
+            </tr>
+            <tr> 
+                <th> <asp:Label ID="Label2" runat="server" Text='<%# Eval("codigo") %>' OnPreRender="idClienteLabel_PreRender" /> </th>
+                <th> <asp:Label ID="Label3" runat="server" Text='<%# Eval("nome") %>' /></th>
+                <th> <asp:Label ID="Label4" runat="server" Text='<%# Eval("telefone") %>' /></th>
+                <th> <asp:Label ID="Label6" runat="server" Text='<%# Eval("cidade") %>' /></th>
+                <th> <asp:Label ID="Label7" runat="server" Text='<%# Eval("email") %>' /></th>
+                <th> <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton1_Click" OnPreRender="LinkButton1_PreRender">Editar</asp:LinkButton> <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" OnPreRender="LinkButton2_PreRender">Excluir</asp:LinkButton> </th>
+            </tr>
+            <br>
+            </br>
+        </table>
         </ItemTemplate>
         <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
     </asp:DataList>
