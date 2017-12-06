@@ -27,8 +27,6 @@
                 <th> <asp:Label ID="Label7" runat="server" Text='<%# Eval("email") %>' /></th>
                 <th> <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton1_Click" OnPreRender="LinkButton1_PreRender">Editar</asp:LinkButton> <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" OnPreRender="LinkButton2_PreRender">Excluir</asp:LinkButton> </th>
             </tr>
-            <br>
-            </br>
         </table>
         </ItemTemplate>
         <SelectedItemStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />

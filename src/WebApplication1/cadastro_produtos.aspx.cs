@@ -29,7 +29,7 @@ namespace WebApplication1
         protected void LinkButton1_Click(object sender, EventArgs e)
         {//alterar
             Session["id_editar"] = (sender as LinkButton).CommandName;
-            Response.Redirect("~/produtos_alterar.aspx");
+            Response.Redirect("~/produto_alterar.aspx");
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)

@@ -59,11 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cadastro_fornecedores.aspx" />
+    <Content Include="cadastro_funcionario.aspx" />
     <Content Include="cadastro_produtos.aspx" />
     <Content Include="fornecedor_adcionar.aspx" />
     <Content Include="fornecedor_editar.aspx" />
     <Content Include="fornecedor_excluir.aspx" />
     <Content Include="cruds\test.txt" />
+    <Content Include="funcionario_adicionar.aspx" />
     <Content Include="index.aspx" />
     <Content Include="produto_adicionar.aspx" />
     <Content Include="produto_alterar.aspx" />
@@ -78,6 +80,13 @@
     </Compile>
     <Compile Include="cadastro_fornecedores.aspx.designer.cs">
       <DependentUpon>cadastro_fornecedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastro_funcionario.aspx.cs">
+      <DependentUpon>cadastro_funcionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastro_funcionario.aspx.designer.cs">
+      <DependentUpon>cadastro_funcionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="cadastro_produtos.aspx.cs">
       <DependentUpon>cadastro_produtos.aspx</DependentUpon>
@@ -106,6 +115,13 @@
     </Compile>
     <Compile Include="fornecedor_excluir.aspx.designer.cs">
       <DependentUpon>fornecedor_excluir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionario_adicionar.aspx.cs">
+      <DependentUpon>funcionario_adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionario_adicionar.aspx.designer.cs">
+      <DependentUpon>funcionario_adicionar.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

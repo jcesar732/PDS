@@ -25,6 +25,6 @@
                 <th> </th>
             </tr>
         </table>-->
-    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="nome_produto" runat="server"></asp:TextBox>
     <asp:Button ID="Button1" runat="server" Text="Salvar" OnClick="Button1_Click" /> <asp:Button ID="Button2" runat="server" Text="Cancelar" OnClick="Button2_Click" />
 </asp:Content>

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -28,7 +30,7 @@ namespace WebApplication1
             SqlCommand com = sqlfornecedor.CreateCommand();
             
             // define SQL do comando
-            com.CommandText = "UPDATE Fornecedor SET descricao = ' "+ TextBox1.Text + " ' WHERE codigo = " + Session["id_editar"] + "; ";
+            com.CommandText = "UPDATE Fornecedor SET nome = ' " + nome_fornecedor.Text + " ', telefone = ' " + telefone.Text + " ', cidade = ' " + cidade.Text + " ', estado = ' " + estado.Text + " ', email = ' " + email.Text + " '  WHERE codigo = " + Session["id_editar"] + "; ";
             com.ExecuteNonQuery();
             Response.Redirect("~/cadastro_fornecedores.aspx");
         }

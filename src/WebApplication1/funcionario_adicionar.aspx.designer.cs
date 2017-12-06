@@ -10,34 +10,25 @@
 namespace WebApplication1 {
     
     
-    public partial class fornecedor_editar {
+    public partial class funcionario_adicionar {
         
         /// <summary>
-        /// DataList1 control.
+        /// codigo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.TextBox codigo;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// nome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// nome_fornecedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nome_fornecedor;
+        protected global::System.Web.UI.WebControls.TextBox nome;
         
         /// <summary>
         /// telefone control.
@@ -49,31 +40,40 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.TextBox telefone;
         
         /// <summary>
-        /// cidade control.
+        /// identidade control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cidade;
+        protected global::System.Web.UI.WebControls.TextBox identidade;
         
         /// <summary>
-        /// estado control.
+        /// carteira_trabalho control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox estado;
+        protected global::System.Web.UI.WebControls.TextBox carteira_trabalho;
         
         /// <summary>
-        /// email control.
+        /// motorista_bool control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox motorista_bool;
+        
+        /// <summary>
+        /// tecnico_bool control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tecnico_bool;
         
         /// <summary>
         /// Button1 control.

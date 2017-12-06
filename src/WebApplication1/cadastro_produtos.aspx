@@ -3,9 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2> Cadastro de produtos <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Incluir</asp:LinkButton></h2>
-
-
-     <asp:DataList ID="DataList1" runat="server" DataKeyField="codigo" DataSourceID="SqlDataSource1" OnPreRender="DataList1_PreRender">
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="codigo" DataSourceID="SqlDataSource1" OnPreRender="DataList1_PreRender">
         <ItemTemplate>
         <table>
             <tr style="padding:8px"> 
@@ -18,8 +16,6 @@
                 <th> <asp:Label ID="Label2" runat="server" Text='<%# Eval("descricao") %>' /> </th>
                 <th> <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" OnPreRender="LinkButton1_PreRender">Alterar</asp:LinkButton> <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" OnPreRender="LinkButton2_PreRender">Excluir</asp:LinkButton> </th>
             </tr>
-            <br>
-            </br>
         </table>
         </ItemTemplate>
     </asp:DataList>
