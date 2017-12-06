@@ -9,25 +9,15 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class funcionario_adicionar : System.Web.UI.Page
+    public partial class funcionario_editar : System.Web.UI.Page
     {
-        bool motorista, tecnico;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (motorista_bool.Text == "sim"){
-                motorista = true;
-            }
-            else motorista = false;
 
-            if (tecnico_bool.Text == "sim")
-            {
-                tecnico = true;
-            }
-            else tecnico = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {//incluir
+        {//salvar
             // Acessa a configuração da conexão
             string s = ConfigurationManager.ConnectionStrings["PDSI_2017_Julio_TrindadeConnectionString"].ConnectionString;
 
@@ -41,10 +31,9 @@ namespace WebApplication1
             SqlCommand com = sqlfornecedor.CreateCommand();
 
             // define SQL do comando
-        //erro commandText
-        //    com.CommandText = "insert into Funcionario(nome, telefone, identidade, carteiraDeTrabalho, motorista, tecnico) values (' " + nome.Text + " ', " + telefone.Text + ",' " + identidade.Text + " ',' " + carteira_trabalho.Text + " ',  " + motorista + " ,  " + tecnico + " )";
+            com.CommandText = "UPDATE Funcionario SET nome = ' " + nome.Text + " ', telefone = ' " + telefone.Text + " ', identidade = ' " + identidade.Text + " ', carteiraDeTrabalho = ' " + carteira_trabalho.Text + " ', motorista =  " + motorista + ", tecnico = " + tecnico + "   WHERE codigo = " + Session["id_editar"] + "; ";
             com.ExecuteNonQuery();
-            Response.Redirect("~/cadastro_funcionario.aspx");
+            Response.Redirect("~/cadastro_fornecedores.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)

@@ -2,9 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <asp:Label ID="Label1" runat="server" Text="Obs: Em motorista e técnico coloque sim ou não para ou respectivos campos"></asp:Label>
     <table>
                 <tr style="padding:8px"> 
-                    <th style="padding:8px"> Codigo </th>
                     <th  style="padding:8px"> Nome </th>
                     <th  style="padding:8px"> Telefone </th>
                     <th  style="padding:8px"> Identidade </th>
@@ -13,7 +14,6 @@
                     <th  style="padding:8px"> Técnico </th>
                 </tr>
                 <tr>
-                    <th> <asp:TextBox ID="codigo" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="nome" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="telefone" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="identidade" runat="server"></asp:TextBox> </th>

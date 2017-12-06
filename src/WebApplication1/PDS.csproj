@@ -66,6 +66,8 @@
     <Content Include="fornecedor_excluir.aspx" />
     <Content Include="cruds\test.txt" />
     <Content Include="funcionario_adicionar.aspx" />
+    <Content Include="funcionario_editar.aspx" />
+    <Content Include="funcionario_excluir.aspx" />
     <Content Include="index.aspx" />
     <Content Include="produto_adicionar.aspx" />
     <Content Include="produto_alterar.aspx" />
@@ -122,6 +124,20 @@
     </Compile>
     <Compile Include="funcionario_adicionar.aspx.designer.cs">
       <DependentUpon>funcionario_adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionario_editar.aspx.cs">
+      <DependentUpon>funcionario_editar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionario_editar.aspx.designer.cs">
+      <DependentUpon>funcionario_editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="funcionario_excluir.aspx.cs">
+      <DependentUpon>funcionario_excluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="funcionario_excluir.aspx.designer.cs">
+      <DependentUpon>funcionario_excluir.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
