@@ -40,10 +40,10 @@
                         <li>
 							<a href="cadastro_produtos.aspx">Cadastro de produtos</a>
 						</li>
-                        <!--<li>
-							<a href="cadastro_compras.aspx">Cadastro de compras</a>
-						</li>
                         <li>
+							<a href="cadastro_funcionario.aspx">Cadastro de funcionários</a>
+						</li>
+                        <!--<li>
 							<a href="cadastro_vendas.aspx">Cadastro de vendas</a>
 						</li>
                         <li>

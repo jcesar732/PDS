@@ -17,6 +17,8 @@ namespace WebApplication1
             {
                 Label1.Text = "Deseja excluir o produto de ID: " + Session["id_excluir"] + "";
             }
+            else
+                Label1.Text = " "+ Session["id_excluir"] + " ";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -33,11 +35,10 @@ namespace WebApplication1
             // Cria comando SQL
             SqlCommand com = sqlfornecedor.CreateCommand();
 
-
             // define SQL do comando
             com.CommandText = "Delete from Funcionario where codigo = ' " + Session["id_excluir"] + " ' ";
             com.ExecuteNonQuery();
-            Response.Redirect("~/cadastro_funcionarios.aspx");
+            Response.Redirect("~/cadastro_funcionario.aspx");
         }
     }
 }

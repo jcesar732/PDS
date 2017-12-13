@@ -11,9 +11,21 @@ namespace WebApplication1
 {
     public partial class funcionario_editar : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        bool motorista_oo;
+        bool tecnico_oo; 
+       protected void Page_Load(object sender, EventArgs e)
         {
+            if (motorista.Text == "sim")
+            {
+                motorista_oo = true;
+            }
+            else motorista_oo = false;
 
+            if (tecnico.Text == "sim")
+            {
+                tecnico_oo = true;
+            }
+            else tecnico_oo = false;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -31,9 +43,9 @@ namespace WebApplication1
             SqlCommand com = sqlfornecedor.CreateCommand();
 
             // define SQL do comando
-            com.CommandText = "UPDATE Funcionario SET nome = ' " + nome.Text + " ', telefone = ' " + telefone.Text + " ', identidade = ' " + identidade.Text + " ', carteiraDeTrabalho = ' " + carteira_trabalho.Text + " ', motorista =  " + motorista + ", tecnico = " + tecnico + "   WHERE codigo = " + Session["id_editar"] + "; ";
+            com.CommandText = "UPDATE Funcionario SET nome = ' " + nome.Text + "  ', telefone = " + telefone.Text + ", identidade = " + identidade.Text + ", carteiraDeTrabalho = " + carteira_trabalho.Text + ", salario = " + salario.Text + ", motorista =  '" + motorista_oo + "', tecnico = '" + tecnico_oo + "'   WHERE codigo = " + Session["id_editar"] + "; ";
             com.ExecuteNonQuery();
-            Response.Redirect("~/cadastro_fornecedores.aspx");
+            Response.Redirect("~/cadastro_funcionario.aspx");
         }
 
         protected void Button2_Click(object sender, EventArgs e)

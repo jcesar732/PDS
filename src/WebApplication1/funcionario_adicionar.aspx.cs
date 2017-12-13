@@ -42,7 +42,7 @@ namespace WebApplication1
 
             // define SQL do comando
                 //erro nos bool
-            com.CommandText = "Insert into Funcionario(nome, telefone, identidade, carteiraDeTrabalho, salario, motorista, tecnico) values (' " + nome.Text + " ', " + telefone.Text + ", " + identidade.Text + "," + carteira_trabalho.Text + ", " + salario.Text + " ,' " + motorista + " ' ,' " + tecnico + " ')";
+            com.CommandText = "Insert into Funcionario(nome, telefone, identidade, carteiraDeTrabalho, salario, motorista, tecnico) values (' " + nome.Text + " ', " + telefone.Text + ", " + identidade.Text + "," + carteira_trabalho.Text + ", " + salario.Text + " ,'" + motorista + "' ,'" + tecnico + "')";
             com.ExecuteNonQuery();
             Response.Redirect("~/cadastro_funcionario.aspx");
         }

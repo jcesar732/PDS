@@ -15,6 +15,10 @@ namespace WebApplication1
 
         }
 
+        protected void Label1_PreRender(object sender, EventArgs e)
+        {//pre-render id
+            id_funcionario = int.Parse((sender as Label).Text);
+        }
         protected void LinkButton3_Click(object sender, EventArgs e)
         {//incluir
             Response.Redirect("~/funcionario_adicionar.aspx");
@@ -23,7 +27,7 @@ namespace WebApplication1
         protected void LinkButton1_Click(object sender, EventArgs e)
         {//editar
             Session["id_editar"] = (sender as LinkButton).CommandName;
-            Response.Redirect("~/produto_alterar.aspx");
+            Response.Redirect("~/funcionario_editar.aspx");
         }
 
         protected void LinkButton1_PreRender(object sender, EventArgs e)
@@ -35,7 +39,7 @@ namespace WebApplication1
         protected void LinkButton2_Click(object sender, EventArgs e)
         {//excluir
             Session["id_excluir"] = (sender as LinkButton).CommandName;
-            Response.Redirect("~/produto_excluir.aspx");
+            Response.Redirect("~/funcionario_excluir.aspx");
         }
 
         protected void LinkButton2_PreRender(object sender, EventArgs e)
@@ -43,5 +47,7 @@ namespace WebApplication1
             (sender as LinkButton).CommandName = Convert.ToString(id_funcionario);
             Session["id_excluir"] = (sender as LinkButton).CommandName;
         }
+
+       
     }
 }

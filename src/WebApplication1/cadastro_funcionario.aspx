@@ -8,6 +8,7 @@
         <ItemTemplate>
             <table>
                 <tr style="padding:8px"> 
+                    <th  style="padding:8px"> Codigo </th>
                     <th  style="padding:8px"> Nome </th>
                     <th  style="padding:8px"> Telefone </th>
                     <th  style="padding:8px"> Identidade </th>
@@ -17,6 +18,7 @@
                     <th  style="padding:8px"> Edição </th>
                 </tr>
                 <tr>
+                    <th> <asp:Label ID="Label2" runat="server" Text='<%# Eval("codigo") %>' OnPreRender="Label1_PreRender" /> </th>
                     <th> <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' /> </th>
                     <th> <asp:Label ID="telefoneLabel" runat="server" Text='<%# Eval("telefone") %>' /> </th>
                     <th> <asp:Label ID="identidadeLabel" runat="server" Text='<%# Eval("identidade") %>' /> </th>
@@ -29,8 +31,6 @@
 
         </ItemTemplate>
     </asp:DataList>
-
-    
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PDSI_2017_Julio_TrindadeConnectionString %>" SelectCommand="SELECT [codigo], [nome], [telefone], [identidade], [carteiraDeTrabalho], [motorista], [tecnico] FROM [Funcionario]"></asp:SqlDataSource>
 </asp:Content>
