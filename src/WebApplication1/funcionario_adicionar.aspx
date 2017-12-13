@@ -9,6 +9,7 @@
                     <th  style="padding:8px"> Nome </th>
                     <th  style="padding:8px"> Telefone </th>
                     <th  style="padding:8px"> Identidade </th>
+                    <th  style="padding:8px"> Salário </th>
                     <th  style="padding:8px"> Carteira de motorista </th>
                     <th  style="padding:8px"> Motorista </th>
                     <th  style="padding:8px"> Técnico </th>
@@ -17,6 +18,7 @@
                     <th> <asp:TextBox ID="nome" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="telefone" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="identidade" runat="server"></asp:TextBox> </th>
+                    <th> <asp:TextBox ID="salario" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="carteira_trabalho" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="motorista_bool" runat="server"></asp:TextBox> </th>
                     <th> <asp:TextBox ID="tecnico_bool" runat="server"></asp:TextBox> </th>                  

@@ -41,8 +41,8 @@ namespace WebApplication1
             SqlCommand com = sqlfornecedor.CreateCommand();
 
             // define SQL do comando
-        //erro commandText
-        //    com.CommandText = "insert into Funcionario(nome, telefone, identidade, carteiraDeTrabalho, motorista, tecnico) values (' " + nome.Text + " ', " + telefone.Text + ",' " + identidade.Text + " ',' " + carteira_trabalho.Text + " ',  " + motorista + " ,  " + tecnico + " )";
+                //erro nos bool
+            com.CommandText = "Insert into Funcionario(nome, telefone, identidade, carteiraDeTrabalho, salario, motorista, tecnico) values (' " + nome.Text + " ', " + telefone.Text + ", " + identidade.Text + "," + carteira_trabalho.Text + ", " + salario.Text + " ,' " + motorista + " ' ,' " + tecnico + " ')";
             com.ExecuteNonQuery();
             Response.Redirect("~/cadastro_funcionario.aspx");
         }
