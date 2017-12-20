@@ -52,7 +52,7 @@ namespace WebApplication1
 
         protected void LinkButton1_Click1(object sender, EventArgs e)
         {//click incluir
-            Response.Redirect("~/fornecedor_adicionar.aspx");
+            Response.Redirect("~/fornecedor_adcionar.aspx");
         }
         //fata o evento incluir
         

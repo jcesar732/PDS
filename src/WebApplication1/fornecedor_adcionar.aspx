@@ -7,12 +7,14 @@
                 <th style="padding:8px"> nome do fornecedor</th>
                 <th style="padding:8px"> telefone </th>
                 <th style="padding:8px"> cidade </th>
+                <th style="padding:8px"> estado </th>
                 <th style="padding:8px"> email </th>
             </tr>
             <tr> 
                 <th> <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> </th>
                 <th><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox> </th>
                 <th><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox> </th>
+                <th> <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox> </th>
                 <th><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox> </th>
             </tr>
         </table>
